@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.8" group="system" method="upgrade">
+	<name>PLG_XWS_AUTOUSERLOGIN</name>
+	<creationDate>21/12/2017</creationDate>
+	<author>Tony Partridge</author>
+	<authorEmail>tony@xws.im</authorEmail>
+	<authorUrl>https://www.xws.im</authorUrl>
+	<copyright>A copyright</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>PLG_XWS_AUTOUSERLOGIN_XML_DESCRIPTION</description>
+
+	<!-- Scripts to run on installation -->
+	<scriptfile></scriptfile>
+
+	<!-- Language files -->
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_xws_autouserlogin.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_xws_autouserlogin.sys.ini</language>
+	</languages>
+
+	<!-- Plugin files -->
+	<files>
+		<filename plugin="xws_autouserlogin">xws_autouserlogin.php</filename>
+		<folder>language</folder>
+	</files>
+
+	<!-- Config parameter -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="userGroups" type="usergroup"
+				       label="Users groups applied too" multiple="true" />
+			</fieldset>
+		</fields>
+	</config>
+
+	<!-- Update servers -->
+	<updateservers>
+		<server type="extension" priority="1" name="xws_autouserlogin">https://updates.xws.im/plg_xws_autouserlogin.xml</server>
+	</updateservers>
+</extension>
